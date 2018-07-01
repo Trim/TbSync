@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://tbsync/locale/ews.dtd">
+
+<dialog
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    title="&ews.newaccount.title;"
+    buttons="cancel,accept"
+    defaultButton="accept"
+    onload="tbSyncEwsNewAccount.onLoad();"
+    onunload="tbSyncEwsNewAccount.onUnload();"
+    onclose="return tbSyncEwsNewAccount.onClose()"
+    ondialogextra1="tbSyncEwsNewAccount.onAdd();">
+
+    <script type="application/javascript" src="chrome://tbsync/content/provider/ews/newaccount.js"/>
+
+    <vbox>
+        <description style="width: 450px">&ews.newaccount.description;</description>
+
+        <grid style="margin-top:1ex">
+            <columns>
+                <column flex="1" />
+                <column flex="2" />
+            </columns>
+            <rows>
+                <row>
+                    <vbox pack="center"><label value="&ews.newaccount.name;" /></vbox>
+                    <textbox id="ews.newaccount.name" oninput="tbSyncEwsNewAccount.onUserTextInput();"/>
+                </row>
+                <row>
+                    <vbox pack="center"><label value="&ews.newaccount.server;" /></vbox>
+                    <textbox id="ews.newaccount.server" oninput="tbSyncEwsNewAccount.onUserTextInput();"/>
+                </row>
+                <row>
+                    <vbox pack="center"><label value="&ews.newaccount.mailbox;" /></vbox>
+                    <textbox id="ews.newaccount.mailbox" oninput="tbSyncEwsNewAccount.onUserTextInput();"/>
+                </row>
+                <row>
+                    <vbox pack="center"><label value="&ews.newaccount.user;" /></vbox>
+                    <textbox id="ews.newaccount.user" oninput="tbSyncEwsNewAccount.onUserTextInput();"/>
+                </row>
+                <row>
+                    <vbox pack="center"><label value="&ews.newaccount.password;" /></vbox>
+                    <textbox id="ews.newaccount.password" type="password" oninput="tbSyncEwsNewAccount.onUserTextInput();"/>
+                </row>
+            </rows>
+        </grid>
+
+    </vbox>
+</dialog>

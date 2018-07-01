@@ -1,0 +1,8 @@
+
+<!ENTITY ews.newaccount.title "Register new Exchange Web Service account">
+<!ENTITY ews.newaccount.description "Please enter a name for the new Exchange Web Service (EWS) account, the mailbox email to fetch and the user and password to connect.">
+<!ENTITY ews.newaccount.name "Account name">
+<!ENTITY ews.newaccount.mailbox "Mailbox">
+<!ENTITY ews.newaccount.user "User">
+<!ENTITY ews.newaccount.password "Password">
+<!ENTITY ews.newaccount.server "Exchange Web Service URL">
