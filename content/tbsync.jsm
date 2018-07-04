@@ -145,6 +145,13 @@ var tbSync = {
                     case "ews4tbsync@jobisoft.de":
                         tbSync.syncProviderList.ews = tbSync.externalProviderList.ews;
                         break;
+                    case "exchangecalendar@extensions.1st-setup.nl":
+                        tbSync.syncProviderList.ews = {
+                            name: "Exchange WebServices from ExchangeCalendar (EWS)",
+                            js: "//exchangecommon/content/tbsync.js" ,
+                            newXul: "//exchangecommon/content/newaccount.xul",
+                            accountXul: "//exchangecommon/content/accountSettings.xul"};
+                        break;
                 }
             }
         }
